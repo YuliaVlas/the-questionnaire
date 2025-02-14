@@ -6,6 +6,34 @@
 
 h1 {
   margin-top: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.text-gradient {
+  font-size: 50px;
+  background-color: #ff0000;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 100%;
+  background-image: linear-gradient(
+    80deg,
+    #8ffd16 25%,
+    #ff2c9e 50%,
+    #8e30e2 70%,
+    #1737c0 80%
+  );
+  animation: pulse 1.5s infinite;
 }
 
 body {
@@ -89,4 +117,20 @@ label[for="phone"] {
 
 label[for="phone"] i {
   cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+.success {
+  color: green;
+}
+.error {
+  color: red;
+}
+#notification {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
 }
